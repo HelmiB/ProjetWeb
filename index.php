@@ -1,0 +1,87 @@
+<?php
+$html='
+<!DOCTYPE HTML>
+<html>
+<head>
+<title> Bienvenue </title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header><nav>
+<ul>
+<li><a  href="#">Patient</a></li>
+<li><a href="#">Visite</a></li>
+<li><a href="#">Département</a></li>
+<li><a href="#">Medecin</a></li>
+<li><a href="#">Lit</a></li>
+<li><a href="#">Chambre</a></li>
+</ul></nav></header>
+<section><div id="affichage">
+<table> ';
+
+for($i=0 ;$i<10 ; $i++){
+
+ $html.="<tr>
+<td> id
+<td> nom
+<td> prenom 
+<td> date de naissance
+<td> date d'émission
+<td> date de sortie
+<td> chambre 
+<td> lit 
+<td> département" ;
+}
+$html.='</table></div>';
+
+// -------------------------------------formulaire-----------
+
+$html.='<div id="formulaire"> <center>
+<form method="post" action="insert.php" enctype="multipart/form-data">
+<table width="200" align="center" >
+<tr>
+<td>Nom :</td>
+<td> <input name="nom" type="text" id="nom" required /></td>
+<tr>
+<td>Age: </td>
+<td> <input name="age" type="number" id="age" /></td>
+</tr>
+<td>
+Email :
+</td>
+<td> <input name="mail" type="email" id="mail" required /></td>
+</tr>
+<tr>
+<td>Date de naissance</td>
+<td> <input name="dn" type="date"id="dn" required></textarea></td>
+</tr>
+<tr>
+<td>Adresse</td>
+<td> <textarea name="adr" id="adr"></textarea></td>
+</tr>
+<tr>
+<td>Photo</td>
+<td> <input name="fichier" type="file" id="fichier" /></td>
+</tr>
+<tr>
+<td>Login: </td>
+<td> <input name="login" type="text" id="login" /></td>
+</tr>
+<tr>
+<td>Password: </td>
+<td> <input name="pwd" type="password" id="pwd" /></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input name="ok" type="submit" /> </td>
+</tr>
+</table>
+</form></center></div>';
+$html.='<br>
+<center><input id="button1" type="button" value="afficher">
+<input id="button2" type="button" value="ajouter"></center>
+
+';
+
+$html.='</section><script src="script.js"> </script></body></html>';
+echo $html ;
+?> 

@@ -1,0 +1,79 @@
+
+body{
+background-image : url("img/bg.jpg") ;
+background-repeat: no-repeat ;	
+}
+
+ul{
+ display: table; 
+ width: 700px;
+ height : 50px;
+ margin: 50px auto;
+ margin-top : 70px;
+ margin-left : 345px ;
+ padding: 0;
+ font: 1.1em sans-serif;
+}
+
+ul li{
+ display: table-cell; 
+ background: #3F606A;
+} 
+ul li a{
+ display: block; /* Afin que tous le bloc devienne cliquable */
+ text-align: center;
+ text-decoration: none; /* Pour enlever le soulignement des liens*/
+ padding: 8px 8px 17px 8px;
+ color: white; 
+ text-shadow: 0 1px 0 rgba(255,255,255,.4); /* ombrer le texte */
+ 
+} 
+ul li a:hover{
+background: rgba(255,255,255,.2);
+}
+
+
+ul li a:focus{
+ background-color : black ;		
+ background-repeat : no-repeat;
+ background-image : url("img/rings.png");
+background-position : top right ;
+ box-shadow: 0 0 2px rgba(0,0,0,.3) inset
+
+}
+table {
+	border-collapse: collapse;
+	width:330px ;
+    border: 1px solid black;
+	margin-left : 0px ;
+}
+th {
+    text-align: left;
+}
+th, td {
+    padding: 16px;
+    text-align: left;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color: #91704B;}
+
+div {
+	margin-left : 345px ;
+	height : 350px;
+	width : 715px;
+    overflow: auto;
+}
+#affichage{
+		display:block;
+
+}
+#formulaire{
+		display:none;
+
+}
+form{
+		margin-left : 150px ;
+
+}

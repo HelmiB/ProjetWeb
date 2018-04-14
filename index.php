@@ -78,8 +78,8 @@ Email :
 </table>
 </form></center></div>';
 $html.='<br>
-<center><input id="button1" type="button" value="afficher">
-<input id="button2" type="button" value="ajouter"></center>
+<center><button class="button button1" id="button1">afficher</button>
+<button class="button button1" id="button2">ajouter</button></center>
 
 ';
 

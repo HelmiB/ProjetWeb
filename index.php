@@ -5,6 +5,7 @@ $html='
 <head>
 <title> Bienvenue </title>
 <link rel="stylesheet" href="style.css" />
+<link href="img/logo.png" rel="icon"/>
 </head>
 <body>
 <header><nav>
@@ -12,7 +13,7 @@ $html='
 <li><a  href="#">Patient</a></li>
 <li><a href="#">Visite</a></li>
 <li><a href="#">Département</a></li>
-<li><a href="#">Medecin</a></li>
+<li><a href="doctor.php">Medecin</a></li>
 <li><a href="#">Lit</a></li>
 <li><a href="#">Chambre</a></li>
 </ul></nav></header>

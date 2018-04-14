@@ -18,21 +18,36 @@ $html='
 <li><a href="#">Chambre</a></li>
 </ul></nav></header>
 <section><div id="affichage">
-<table> ';
-
-for($i=0 ;$i<10 ; $i++){
-
- $html.="<tr>
-<td> id
-<td> nom
-<td> prenom 
-<td> date de naissance
-<td> date d'émission
-<td> date de sortie
-<td> chambre 
-<td> lit 
-<td> département" ;
+        <table class="table table-bordered table-hover">
+            <tr><td colspan="6">search by name:<form method="get"><input name="text" type="text"><input type="submit" value="search"></form></td></tr>
+            <tr class="active">
+                <td>Patient ID</td>
+                <td>Patient Name</td>
+                <td>Patient LastName</td>
+                <td>Date de naissance</td>
+                <td>Date d émission</td>
+                <td>Date de sortie</td>
+                <td>Chambre</td>
+                <td>Lit</td>
+                <td>Department</td>        
+            </tr>';
+try{
+    $bdd2= new PDO('mysql:host=localhost;dbName=hopital', 'root', '');
 }
+catch (PDOException$e) { print"Erreur : " . $e->getMessage();die(); }
+$bdd2->query("USE hopital");
+if((isset($_GET["text"]))AND(!empty($_GET["text"]))){
+    $reponse= $bdd2->query('select * from patient WHERE nom LIKE "'.$_GET["text"].'%" or nom LIKE "'.'% '.$_GET["text"].'%"');
+}
+else{
+    $reponse= $bdd2->query('select * from patient ORDER by id ASC ');
+}
+if($reponse){
+    $resultat = $reponse->fetchAll(PDO:: FETCH_OBJ );
+    foreach($resultat as $res)
+ $html.='<tr id="tab"><td>'.$res->id.'<td>'.$res->nom.'<td>'.$res->prenom.'<td>'.$res->date_naissance.'<td>'.$res->date_emission.'<td>'.$res->date_sortie.'<td>'.$res->chambre.'<td>'.$res->lit.'<td>'.$res->departement;
+}
+
 $html.='</table></div>';
 
 // -------------------------------------formulaire-----------
@@ -79,9 +94,7 @@ Email :
 </form></center></div>';
 $html.='<br>
 <center><button class="button button1" id="button1">afficher</button>
-<button class="button button1" id="button2">ajouter</button></center>
-
-';
+<button class="button button1" id="button2">ajouter</button></center>';
 
 $html.='</section><script src="script.js"> </script></body></html>';
 echo $html ;

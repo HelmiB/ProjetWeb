@@ -27,12 +27,12 @@
             </tr>
             <?php
             try{
-                $bdd2= new PDO('mysql:host=localhost;dbName=bdd2', 'root', '');
+                $bdd2= new PDO('mysql:host=localhost;dbName=hopital', 'root', '');
             }
             catch (PDOException$e) { print"Erreur : " . $e->getMessage();die(); }
-            $bdd2->query("USE bdd2");
+            $bdd2->query("USE hopital");
             if((isset($_GET["text"]))AND(!empty($_GET["text"]))){
-                $reponse= $bdd2->query('select * from medecin WHERE nom LIKE "'.$_GET["text"].'%"');
+                $reponse= $bdd2->query('select * from medecin WHERE nom LIKE "'.$_GET["text"].'%" or nom LIKE "'.'% '.$_GET["text"].'%"');
             }
             else{
                 $reponse= $bdd2->query('select * from medecin ORDER by id ASC ');
@@ -86,8 +86,8 @@
                     </tr>
                 </table>
             </form></center></div>
-    <center><input id="button1" type="button" value="afficher">
-        <input id="button2" type="button" value="ajouter"></center></section>
+    <center><button class="button button1" id="button1">afficher</button>
+        <button class="button button1" id="button2">ajouter</button></center></section>
 <script src="script.js"> </script>;
 </body>
 </html>

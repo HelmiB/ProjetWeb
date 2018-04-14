@@ -52,7 +52,7 @@ $html.='</table></div>';
 
 // -------------------------------------formulaire-----------
 
-$html.='<div id="formulaire"> <center>
+$html.='<div id="formulaire"> 
 <form method="post" action="insert.php" enctype="multipart/form-data">
 <table width="200" align="center" >
 <tr>
@@ -69,7 +69,7 @@ Email :
 </tr>
 <tr>
 <td>Date de naissance</td>
-<td> <input name="dn" type="date"id="dn" required></textarea></td>
+<td> <input name="dn" type="date" id="dn" required></textarea></td>
 </tr>
 <tr>
 <td>Adresse</td>
@@ -91,10 +91,10 @@ Email :
 <td colspan="2" align="center"><input name="ok" type="submit" /> </td>
 </tr>
 </table>
-</form></center></div>';
+</form></div>';
 $html.='<br>
-<center><button class="button button1" id="button1">afficher</button>
-<button class="button button1" id="button2">ajouter</button></center>';
+<button class="button button1" id="button1">afficher</button>
+<button class="button button1" id="button2">ajouter</button>';
 
 $html.='</section><script src="script.js"> </script></body></html>';
 echo $html ;

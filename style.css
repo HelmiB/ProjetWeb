@@ -59,7 +59,7 @@ th, td {
 }
 tr:hover {background-color: #91704B;}
 
-div {
+iframe {
 	margin-left : 345px ;
 	height : 350px;
 	width : 715px;
@@ -107,4 +107,8 @@ form{
 .button1:hover {
     background-color: #3F606A;
     color: white;
+}
+#barre{
+    margin-left : 345px ;
+
 }

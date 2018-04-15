@@ -8,3 +8,7 @@ document.getElementById('button2').onclick = function () {
     document.getElementById('affichage').style.display="none";
 	document.getElementById('formulaire').style.display="block";
 }
+
+function myFunction() {
+    document.getElementById("myForm").submit();
+    }

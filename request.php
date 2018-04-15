@@ -22,6 +22,7 @@ if((isset($_GET["text"]))AND(!empty($_GET["text"]))){
 else{
     $reponse= $bdd2->query('select * from '.$table.' '.$sort);
 }
+if($reponse){
 $n=$reponse->columnCount();
 echo "<table> <tr>";
 for ($i=0;$i<$n;$i++){
@@ -37,6 +38,6 @@ foreach($reponse as $res)
 
     }
 }
-echo "</table>";
+echo "</table>";}
 
 ?>

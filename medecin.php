@@ -7,7 +7,7 @@
 <header>
     <nav>
         <ul>
-            <li><a  href="#">Patient</a></li>
+            <li><a  href="patient.php">Patient</a></li>
             <li><a href="#">Visite</a></li>
             <li><a href="#">Département</a></li>
             <li><a href="medecin.php">Medecin</a></li>

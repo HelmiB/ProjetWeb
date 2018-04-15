@@ -10,12 +10,12 @@ $html='
 <body>
 <header><nav>
 <ul>
-<li><a  href="patient.php">Patient</a></li>
-<li><a href="#">Visite</a></li>
-<li><a href="#">Département</a></li>
-<li><a href="medecin.php">Medecin</a></li>
-<li><a href="#">Lit</a></li>
-<li><a href="#">Chambre</a></li>
+            <li><a  href="patient.php">Patient</a></li>
+            <li><a href="#">Visite</a></li>
+            <li><a href="#">Département</a></li>
+            <li><a href="medecin.php">Medecin</a></li>
+            <li><a href="#">Lit</a></li>
+            <li><a href="#">Chambre</a></li>
 </ul></nav></header>
 <section>
      <div id="barre">search by name:<form action="request.php" target="affichage" method="get" id="myForm" ><input name="text" type="text"> 
